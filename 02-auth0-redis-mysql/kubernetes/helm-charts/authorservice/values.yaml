@@ -37,7 +37,5 @@ configmap:
   db-url: "mysql"
 
 secret:
-  username: "root"
-  password: "password"
-  # password: "cGFzc3dvcmQK"
-  # username: "cm9vdAo="
+  password: "cGFzc3dvcmQK"
+  username: "cm9vdAo="
