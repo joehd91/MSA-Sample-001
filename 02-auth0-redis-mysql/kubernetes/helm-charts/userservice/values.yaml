@@ -10,9 +10,7 @@ image:
   tag: "1.0"
 
 # imagePullSecrets: []
-# imagePullSecrets: sampleacr001
 imagePullSecrets: [{ name: sampleacr001 }]
-
 nameOverride: ""
 fullnameOverride: ""
 
