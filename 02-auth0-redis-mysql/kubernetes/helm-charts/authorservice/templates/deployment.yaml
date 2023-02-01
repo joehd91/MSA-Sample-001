@@ -18,9 +18,9 @@ spec:
       labels:
         {{- include "author.selectorLabels" . | nindent 8 }}
     spec:
-      {{- if .Values.imagePullSecrets }}
+      {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
-      - name: {{ .Values.imagePullSecrets }}
+        {{- toYaml . | nindent 8 }}
       {{- end }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
@@ -69,7 +69,8 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      # {{- with .Values.imagePullSecrets }}
+
+      # {{- if .Values.imagePullSecrets }}
       # imagePullSecrets:
-      #   {{- toYaml . | nindent 8 }}
+      # - name: {{ .Values.imagePullSecrets }}
       # {{- end }}
