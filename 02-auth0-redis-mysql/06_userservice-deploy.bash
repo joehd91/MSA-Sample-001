@@ -1,5 +1,6 @@
 # gradlew를 사용하여 userservice 빌드
 # - 경로: msa/userservice
+#gradle wrap
 ./gradlew clean build
 
 # acr 로그인
