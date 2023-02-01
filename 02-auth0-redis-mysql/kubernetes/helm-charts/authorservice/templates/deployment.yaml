@@ -18,10 +18,6 @@ spec:
       labels:
         {{- include "author.selectorLabels" . | nindent 8 }}
     spec:
-      # {{- with .Values.imagePullSecrets }}
-      # imagePullSecrets:
-      #   {{- toYaml . | nindent 8 }}
-      # {{- end }}
       {{- if .Values.imagePullSecrets }}
       imagePullSecrets:
       - name: {{ .Values.imagePullSecrets }}
@@ -73,3 +69,7 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
       {{- end }}
+      # {{- with .Values.imagePullSecrets }}
+      # imagePullSecrets:
+      #   {{- toYaml . | nindent 8 }}
+      # {{- end }}
