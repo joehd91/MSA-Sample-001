@@ -11,8 +11,8 @@ image:
 
 # imagePullSecrets: []
 imagePullSecrets: [{ name: sampleacr001 }]
-nameOverride: ""
-fullnameOverride: ""
+# nameOverride: ""
+# fullnameOverride: ""
 
 podAnnotations: {}
 
@@ -36,6 +36,10 @@ configmap:
   db-name: "mapstruct_demo"
   db-url: "mysql"
 
+# secret:
+#   password: "cGFzc3dvcmQK"
+#   username: "cm9vdAo="
+
 secret:
-  password: "cGFzc3dvcmQK"
-  username: "cm9vdAo="
+  password: "password"
+  username: "root"
