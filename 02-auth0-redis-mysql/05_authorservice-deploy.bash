@@ -21,3 +21,7 @@ kubectl create secret docker-registry sampleacr001 \
     --docker-server=sampleacr001.azurecr.io \
     --docker-username=sampleacr001 \
     --docker-password=dcyEuoRT+QPip0ShJvi9bavfH4L1FJXVitpuwaUl/m+ACRCwsqcF
+
+# * ArgoCD를 통해 author를 배포하기 전에 value.yaml에서 secret.username, secret.password가 인코딩된 코드가 맞는지 확인
+# echo -n "username" | base64
+# echo -n "password" | base64
