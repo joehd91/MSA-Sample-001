@@ -36,10 +36,10 @@ configmap:
   db-name: "mapstruct_demo"
   db-url: "mysql"
 
-# secret:
-#   password: "cGFzc3dvcmQK"
-#   username: "cm9vdAo="
-
 secret:
-  password: "password"
-  username: "root"
+  password: "cGFzc3dvcmQK"
+  username: "cm9vdAo="
+
+# secret:
+#   password: "password"
+#   username: "root"

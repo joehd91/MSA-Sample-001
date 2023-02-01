@@ -45,12 +45,12 @@ spec:
             valueFrom:
               secretKeyRef:
                 name: author-secret
-                key: username
+                key: cm9vdAo=
           - name: DB_PASSWORD
             valueFrom:
               secretKeyRef:
                 name: author-secret
-                key: password
+                key: cGFzc3dvcmQK
           ports:
             - name: http
               containerPort: 8080
