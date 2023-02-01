@@ -5,11 +5,12 @@
 replicaCount: 1
 
 image:
-  repository: <AWS ECR URL>/authorservice
+  repository: sampleacr001.azurecr.io/authorservice
   pullPolicy: IfNotPresent
   tag: "1.0"
 
-imagePullSecrets: []
+# imagePullSecrets: []
+imagePullSecrets: docker-registry
 nameOverride: ""
 fullnameOverride: ""
 
