@@ -19,8 +19,12 @@ spec:
         {{- include "author.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
+      # imagePullSecrets:
+      #   {{- toYaml . | nindent 8 }}
+      # {{- end }}
+      {{- if .Values.imagePullSecrets }}
       imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
+      - name: {{ .Values.imagePullSecrets }}
       {{- end }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}

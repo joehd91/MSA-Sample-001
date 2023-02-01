@@ -18,10 +18,13 @@ spec:
       labels:
         {{- include "user.selectorLabels" . | nindent 8 }}
     spec:
-      {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
-        {{- toYaml . | nindent 8 }}
+      - name: {{ .Values.imagePullSecrets }}
       {{- end }}
+      # {{- with .Values.imagePullSecrets }}
+      # imagePullSecrets:
+      #   {{- toYaml . | nindent 8 }}
+      # {{- end }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
