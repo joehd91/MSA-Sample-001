@@ -37,17 +37,17 @@ spec:
           - name: DB_URL
             valueFrom:
               configMapKeyRef:
-                name: user-configmap
+                name: users-configmap
                 key: db-url
           - name: DB_NAME
             valueFrom:
               configMapKeyRef:
-                name: user-configmap
+                name: users-configmap
                 key: db-name
           - name: CACHE_URL
             valueFrom:
               configMapKeyRef:
-                name: user-configmap
+                name: users-configmap
                 key: cache-url
           - name: DB_USERNAME
             valueFrom:
