@@ -23,8 +23,6 @@ podSecurityContext: {}
 securityContext: {}
 
 service:
-  annotations: 
-    service.beta.kubernetes.io/azure-dns-label-name: userservice
   type: LoadBalancer
   port: 8080
 
