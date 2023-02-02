@@ -23,7 +23,9 @@ securityContext: {}
 service:
   type: LoadBalancer
   port: 8080
-  # annotations: [{ service.beta.kubernetes.io/azure-dns-label-name: author123 }]
+  annotations: { 
+    service.beta.kubernetes.io/azure-dns-label-name: "author"
+  }
   
 
 resources: {}
