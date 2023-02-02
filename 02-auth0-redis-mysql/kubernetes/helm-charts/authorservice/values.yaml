@@ -14,7 +14,9 @@ imagePullSecrets: [{ name: sampleacr001 }]
 # nameOverride: ""
 # fullnameOverride: ""
 
-podAnnotations: {}
+podAnnotations: { 
+  service.beta.kubernetes.io/azure-dns-label-name: "author"
+}
 
 podSecurityContext: {}
 
@@ -23,10 +25,6 @@ securityContext: {}
 service:
   type: LoadBalancer
   port: 8080
-  annotations: { 
-    service.beta.kubernetes.io/azure-dns-label-name: "author"
-  }
-  
 
 resources: {}
 

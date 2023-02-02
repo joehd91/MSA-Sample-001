@@ -4,6 +4,10 @@ metadata:
   name: {{ include "author.fullname" . }}-service
   labels:
     {{- include "author.labels" . | nindent 4 }}
+    {{- with .Values.podAnnotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
 spec:
   ports:
     - port: {{ .Values.service.port }}
@@ -13,7 +17,3 @@ spec:
   selector:
     {{- include "author.selectorLabels" . | nindent 4 }}
   type: {{ .Values.service.type }}
-  #   {{- with .Values.service.annotations }}
-  # annotations:
-  #   {{- toYaml . | nindent 8 }}
-  # {{- end }}
