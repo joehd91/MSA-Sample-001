@@ -4,7 +4,7 @@ metadata:
   name: {{ include "author.fullname" . }}-service
   labels:
     {{- include "author.labels" . | nindent 4 }}
-  {{- with .Values.ingress.annotations }}
+  {{- with .Values.service.annotations }}
   annotations:
     {{- toYaml . | nindent 4 }}
 spec:
