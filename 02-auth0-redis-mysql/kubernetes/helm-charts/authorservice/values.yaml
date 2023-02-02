@@ -21,7 +21,8 @@ podSecurityContext: {}
 securityContext: {}
 
 service:
-  annotations: [{service.beta.kubernetes.io/azure-load-balancer-resource-group: myResourceGroup}]
+  annotations: 
+    service.beta.kubernetes.io/azure-dns-label-name: authorservice
   type: LoadBalancer
   port: 8080
   

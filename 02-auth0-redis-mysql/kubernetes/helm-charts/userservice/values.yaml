@@ -21,6 +21,8 @@ podSecurityContext: {}
 securityContext: {}
 
 service:
+  annotations: 
+    service.beta.kubernetes.io/azure-dns-label-name: userservice
   type: LoadBalancer
   port: 8080
 
@@ -38,5 +40,5 @@ configmap:
   cache-url: "redis"
 
 secret:
-  password: "cGFzc3dvcmQK"
-  username: "cm9vdAo="
+  username: "cm9vdA=="
+  password: "cGFzc3dvcmQ="
