@@ -11,8 +11,8 @@ image:
 
 # imagePullSecrets: []
 imagePullSecrets: [{ name: sampleacr001 }]
-nameOverride: ""
-fullnameOverride: ""
+# nameOverride: ""
+# fullnameOverride: ""
 
 podAnnotations: { 
   service.beta.kubernetes.io/azure-dns-label-name: "user"
