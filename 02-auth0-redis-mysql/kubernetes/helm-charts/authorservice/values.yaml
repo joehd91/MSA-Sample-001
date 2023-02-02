@@ -21,8 +21,10 @@ podSecurityContext: {}
 securityContext: {}
 
 service:
+  annotations: [{service.beta.kubernetes.io/azure-load-balancer-resource-group: myResourceGroup}]
   type: LoadBalancer
   port: 8080
+  
 
 resources: {}
 
@@ -39,7 +41,3 @@ configmap:
 secret:
   username: "cm9vdA=="
   password: "cGFzc3dvcmQ="
-
-# secret:
-#   password: "password"
-#   username: "root"
